@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Discover the latest fashion trends at our online clothing store. Shop now for the best deals!">
+    <title>Clothing Store</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900">
+
+    <!-- Header Section -->
+    <header class="bg-white shadow p-4 flex justify-between items-center">
+        <div class="logo flex items-center">
+            <a href="#" class="text-2xl font-bold">
+                <i class="fas fa-tshirt text-purple-600"></i> Online Clothing Store
+            </a>
+        </div>
+        <nav>
+            <ul class="flex space-x-6">
+                <li><a href="#home" class="text-gray-600 hover:text-purple-600">Home</a></li>
+                <li><a href="#about" class="text-gray-600 hover:text-purple-600">About</a></li>
+                <li><a href="#contact" class="text-gray-600 hover:text-purple-600">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="cart relative">
+            <img src="images/cart-icon.png" alt="Shopping cart icon" class="w-8 h-8">
+            <span id="cart-count" class="absolute top-0 right-0 bg-purple-600 text-white text-xs rounded-full px-2">0</span>
+        </div>
+    </header>
+
+    <!-- Search Bar Section -->
+    <section class="search-bar bg-white p-4 shadow my-4">
+        <label for="search-input" class="sr-only">Search Products</label>
+        <input type="text" id="search-input" placeholder="Search for products..." class="w-full border rounded p-2" oninput="filterProducts()">
+    </section>
+
+    <!-- Add New Product Section -->
+    <section>
+        <h2 class="text-2xl font-semibold mb-4">Add New Product</h2>
+        <form id="products" class="space-y-4 mb-6">
+            <input type="text" id="name" placeholder="Name" required 
+                   class="w-full p-2 border rounded-md" />
+            <input type="number" id="age" placeholder="Age" required 
+                   class="w-full p-2 border rounded-md" />
+            <input type="text" id="product" placeholder="Product" required 
+                   class="w-full p-2 border rounded-md" />
+            <input type="text" id="color" placeholder="Color" required 
+                   class="w-full p-2 border rounded-md" />
+            <button type="submit" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded">
+             Order Product
+            </button>
+        </form>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 p-4" id="product-list">
+        <!-- Product items will go here -->
+    </section>
+
+    <!-- About Us Section -->
+    <section id="about" class="about bg-white p-6 shadow my-4">
+        <h2 class="text-xl font-bold mb-2">About Us</h2>
+        <p>We are an online clothing store offering the latest fashion trends.</p>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact bg-white p-6 shadow my-4">
+        <h2 class="text-xl font-bold mb-2">Contact Us</h2>
+        <p>Email: <a href="mailto:blessingwesonga234@gmail.com" class="text-purple-600 hover:underline">blessingwesonga234@gmail.com</a></p>
+        <p>Phone: <a href="tel:+254112038747" class="text-purple-600 hover:underline">0112038747</a></p>
+    </section>
+
+    <!-- Cart Section -->
+    <section class="cart-section bg-white p-6 shadow my-4">
+        <h2 class="text-xl font-bold mb-2">Shopping Cart</h2>
+        <ul id="cart-items" class="list-disc pl-6">
+            <!-- Cart items will be dynamically generated here -->
+        </ul>
+        <p class="mt-2">Total: $<span id="total-price">0.00</span></p>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white p-6 mt-6">
+        <div class="flex justify-between items-center">
+            <div class="social-media">
+                <h3 class="text-lg font-semibold mb-2">Follow Us</h3>
+                <ul class="flex space-x-4">
+                    <li><a href="https://facebook.com" target="_blank" class="fab fa-facebook text-2xl"></a></li>
+                    <li><a href="https://instagram.com" target="_blank" class="fab fa-instagram text-2xl"></a></li>
+                    <li><a href="https://pinterest.com" target="_blank" class="fab fa-pinterest text-2xl"></a></li>
+                </ul>
+            </div>
+            <div class="payment-methods">
+                <h3 class="text-lg font-semibold mb-2">Payment Methods</h3>
+                <ul class="flex space-x-4">
+                    <li><img src="images/visa.png" alt="Visa" class="w-12"></li>
+                    <li><img src="images/mastercard.png" alt="MasterCard" class="w-12"></li>
+                    <li><img src="images/paypal.png" alt="PayPal" class="w-12"></li>
+                </ul>
+            </div>
+        </div>
+        <p class="text-center mt-4">&copy; 2024 Online Clothing Store. All Rights Reserved.</p>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

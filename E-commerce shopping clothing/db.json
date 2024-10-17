@@ -1,0 +1,40 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Casual Shirt",
+      "price": 300,
+      "category": "shirts",
+      "image": "shirt1.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Formal Pants",
+      "price": 250,
+      "category": "pants",
+      "image": "pants1.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Leather Jacket",
+      "price": 500,
+      "category": "jackets",
+      "image": "jacket1.jpg"
+    },
+    {
+      "id": 4,
+      "name": "T-Shirt",
+      "price": 150,
+      "category": "shirts",
+      "image": "shirt2.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Jeans",
+      "price": 400,
+      "category": "pants",
+      "image": "pants2.jpg"
+    }
+  ]
+}
+  
